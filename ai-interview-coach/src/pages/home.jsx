@@ -1,29 +1,38 @@
- import { Link } from "react-router-dom";
- 
-function Home() {
-  return (
-    <section id="hero">
-      <div className="hero-content">
-        <h1>AI Interview Coach</h1>
+//  import { Link } from "react-router-dom";
+//  import Parent  from "../parent";
+// function Home() {
+//   return (
+//     <section id="hero">
+//       <div className="hero-content">
+//         <h1>AI Interview Coach</h1>
 
-        <p>Students don't get realistic interview practice.</p>
+//         <p>Students don't get realistic interview practice.</p>
 
-        <div className="hero-buttons">
-          <Link to="/interview">
-            <button>Start Free Interview</button>
+//         <div className="hero-buttons">
+//           <Link to="/interview">
+          
+          
+//             <button style = {{backgroundColor : "red" ,}}>Start Free Interview</button>
             
-          </Link>
+//           </Link>
+//            {/* <h1 style={{ color: "red" }}>{props.name}</h1>
+//     <h2 style={{ color: "red" }}>{props.class}</h2> */}
 
-<Link to ="/label">
-<button>ishan</button>
-</Link>
-          <Link to="/features">
-            <button>Features</button>
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
+// <Link to ="/label">
+// <button>page</button>
+// </Link>
+//           <Link to="/features">
+//             <button>Features</button>
+//           </Link>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default Home;
+function Home() {
+  return <h1>Home Page</h1>;
 }
 
 export default Home;

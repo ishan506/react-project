@@ -8,14 +8,15 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start" : "vite"
-
+    "start": "vite"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.2",
+    "postcss": "^8.5.18",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^7.18.1"
-    
+    "react-router-dom": "^7.18.1",
+    "tailwindcss": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
