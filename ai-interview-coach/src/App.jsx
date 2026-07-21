@@ -45,16 +45,17 @@
 // export default App;
  
   import {Route,Routes,BrowserRouter} from "react-router-dom"
-import Home from "../home"
+import Apps from "../movie"
 import Userpage from "../user"
  function App(){
     return(
-        <BrowserRouter>
-    <Routes>
-<Route path="/" element={<Home/>}/>
-    <Route path="/user" element={<Userpage/>}/>
-    </Routes>
-   </BrowserRouter>
+      <Apps/>
+//         <BrowserRouter>
+//     <Routes>
+// <Route path="/" element={<Home/>}/>
+//     <Route path="/user" element={<Userpage/>}/>
+//     </Routes>
+//    </BrowserRouter>
     )
  }
  export default App
