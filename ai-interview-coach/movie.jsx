@@ -1,45 +1,47 @@
-  import {useState} from "react"
- function Apps(){
-     const [find , setFind]=useState("")
+ import { useState } from "react";
 
-    
- const movies = [
-  "Avengers",
-  "Batman",
-  "Iron Man",
-  "Spider-Man",
-  "Jawan",
-  "Pathaan",
-  "KGF",
-  "Pushpa",
-];
- const fi=movies.filter((user)=>
-  user.toLowerCase().includes(find.toLowerCase())
+function Apps() {
+  const [find, setFind] = useState("");
+  const [result, setResult] = useState([]);
 
-)
-function click(){
- setFind(fi);
+  const movies = [
+    "Avengers",
+    "Batman",
+    "Iron Man",
+    "Spider-Man",
+    "Jawan",
+    "Pathaan",
+    "KGF",
+    "Pushpa",
+  ];
+
+  function click() {
+    const fi = movies.filter((movie) =>
+      movie.toLowerCase().includes(find.toLowerCase())
+    );
+
+    setResult(fi);
+  }
+
+  return (
+    <>
+      <input
+        type="text"
+        value={find}
+        onChange={(e) => setFind(e.target.value)}
+      />
+
+      <button onClick={click}>Search</button>
+
+      <ul>
+        {(result.length === 0 && find === "" ? movies : result).map(
+          (movie, index) => (
+            <li key={index}>{movie}</li>a 
+          )
+        )}
+      </ul>
+    </>
+  );
 }
 
-    
-    
-   
-return(
-  <>
-  
-     <input type="text" value={find} onChange={(e)=>{setFind(e.target.value)}} />
-     <button onClick={ click}>gs</button>
- 
-     <ul>
-        {movies.map((user,index)=>{
-            
-    <li key={index}>{user}</li>
-   
-  
- })}
-      
-     </ul>
-    </>
-)
-  }
- export default Apps;
+export default Apps;

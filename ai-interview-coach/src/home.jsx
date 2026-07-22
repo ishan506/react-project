@@ -1,6 +1,8 @@
 import {useState} from "react"
 import {Link} from "react-router-dom"
 import { useNavigate } from "react-router-dom";
+import  {p} from "./imp"
+import {useContext} from "react"
 function Home(){
     const navigate = useNavigate()
 const [add , setAdd]= useState("")
@@ -19,22 +21,24 @@ function data(){
     setAdd("")
       navigate("/user");
 }
+  const {name,setName} = useContext(p);
 return (
     <>
-    <input type="text"  value={add}onChange ={(e)=>setAdd(e.target.value)}/>
+     <h1>{name}</h1>
+    <input type="text"  value={name}onChange ={(e)=>setName(e.target.value)}/>
     <button  onClick={data} >submit</button>
     
-  
+ 
      <Link to ="/">Home</Link>
 <ul>
    {user.map((users,index)=>{
 return <li key={index}>
-{users}
+{users} {name}
 </li>
  
     })}
     
-    
+    <h1>{name}</h1>
     </ul>
     </>
 )

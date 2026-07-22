@@ -1,5 +1,7 @@
 import{useState,useEffect} from "react"
 import {Link} from "react-router-dom"
+ import {p} from "./src/imp";
+ import {useContext} from "react"
 function Userpage(){ 
 const [update , setUpdate] =useState("")
 const [change, setChange] =useState([])
@@ -20,7 +22,9 @@ useEffect(()=>{
  const pi=change.map((user,i)=> i==index? p :user )
       setChange(pi);
   localStorage.setItem("key", JSON.stringify(pi));
+ 
   }
+   const {name,setName}= useContext(p)
 return (<>
 
   <table border="1">
@@ -28,7 +32,7 @@ return (<>
         
     
          
-    <th>Company</th>
+    <th>{name}</th>
     {change.map((users,index)=>{
 
  
