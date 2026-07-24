@@ -36,7 +36,7 @@ function Apps() {
       <ul>
         {(result.length === 0 && find === "" ? movies : result).map(
           (movie, index) => (
-            <li key={index}>{movie}</li>a 
+            <li key={index}>{movie}</li>
           )
         )}
       </ul>
