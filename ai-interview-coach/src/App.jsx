@@ -1,4 +1,4 @@
-//  import "./index.css"; 
+ // import "./index.css"; 
 // import { Provider } from "react-redux"
 // import store from "../store"
 // import Apps from "../cart"
@@ -35,19 +35,22 @@
 //   )
 // }
 // export default App
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import    P from "../params";
- import Apps from "../fetch";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import    P from "../params";
+ import Apps from "../../like";
 
-function App() {
+ function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-          <Route path="/" element={<Apps />} />
-        <Route path="/recipe/:id" element={< P />} />
-      </Routes>
-    </BrowserRouter>
+     
+<Apps/>
+     
+//     <BrowserRouter>
+//       <Routes>
+//           <Route path="/" element={<Apps />} />
+//         <Route path="/recipe/:id" element={< P />} />
+//       </Routes>
+//     </BrowserRouter>
   );
-}
+ }
 
 export default App;
