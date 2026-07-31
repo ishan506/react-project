@@ -1,0 +1,16 @@
+/* Base styles for the slider container */
+.slider {
+  position: absolute;
+  top: 10;
+  right: -30px; /* Start completely hidden off-screen */
+  width: 300px;
+  height: 100vh;
+  background-color: red;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* When the active class is added, slide it into view */
+.slider.active {
+  transform: translateX(-300px); /* Pulls it back onto the screen */
+}

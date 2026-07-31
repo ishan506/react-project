@@ -1,17 +1,21 @@
 import {useState,useEffect} from "react"
 function Apps(){
-    const [status , setStatus] =useState(navigator.onLine)
-    const handleOnline =()=>setStatus(true)
-     const handleOffline = ()=>setStatus(false)
-     useEffect(()=>{
-    window.addEventListener("online" ,handleOnline)
-     window.addEventListener("offline" ,handleOffline)
-     return ()=>{
-         window.removeEventListener("online" ,handleOnline)
-     window.removeEventListener("offline" ,handleOffline)
-     } },[])
-     return (
-<h1>{status ?"Online" :"OFFLINE"}</h1>
-     )
+    const [status , setStatus]=useState(navigator.onLine)
+    const handleon=()=>setStatus(true)
+         const handleoff=()=>setStatus(false)
+    useEffect(()=>{
+window.addEventListener("online" ,handleon)
+window.addEventListener("offline" ,handleoff)
+return ()=>{
+window.removeEventListener("online" ,handleon)
+window.removeEventListener("offline" ,handleoff)
+}
+    },[])
+return (
+    <>
+    <h1>{status ? "online" : "offline"}</h1>
+    </>
+)
 }
 export default Apps
+

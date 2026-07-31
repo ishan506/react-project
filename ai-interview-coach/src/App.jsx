@@ -1,56 +1,81 @@
- // import "./index.css"; 
-// import { Provider } from "react-redux"
-// import store from "../store"
-// import Apps from "../cart"
-// import Appes from "../homes"
-// import { BrowserRouter ,Route ,Routes } from "react-router-dom";
-// function App(){  
-//   return (
-//     <>
-//      <Provider store={store}>
-//     <BrowserRouter>
-//     <Routes>
+//  // import "./index.css"; 
+// // import { Provider } from "react-redux"
+// // import store from "../store"
+// // import Apps from "../cart"
+// // import Appes from "../homes"
+// // import { BrowserRouter ,Route ,Routes } from "react-router-dom";
+// // function App(){  
+// //   return (
+// //     <>
+// //      <Provider store={store}>
+// //     <BrowserRouter>
+// //     <Routes>
       
-//  <Route path="/" element={<Apps/>} />
-//         <Route path="/cart" element={<Appes/>} />
+// //  <Route path="/" element={<Apps/>} />
+// //         <Route path="/cart" element={<Appes/>} />
      
-//     </Routes>
-//     </BrowserRouter>
+// //     </Routes>
+// //     </BrowserRouter>
   
    
 
  
-// </Provider>
-//     </>
-//   )
-// }
-// export default App
+// // </Provider>
+// //     </>
+// //   )
+// // }
+// // export default App
 
-// import Apps from  "../fetch" ;
-// function App(){
+// // import Apps from  "../fetch" ;
+// // function App(){
+// //   return (
+// //     <>
+// //     <Apps/>
+// //     </>
+// //   )
+// // }
+// // export default App
+// // import { BrowserRouter, Routes, Route } from "react-router-dom";
+// // import    P from "../params";
+//  import Apps from "../../header";
+ 
+//  function App() {
 //   return (
-//     <>
-//     <Apps/>
-//     </>
-//   )
-// }
-// export default App
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import    P from "../params";
- import Apps from "../../like";
+//      <>
+// <Apps/>
+     
+// {/* //     <BrowserRouter>
+// //       <Routes>
+// //           <Route path="/" element={<Apps />} />
+// //         <Route path="/recipe/:id" element={< P />} />
+// //       </Routes>
+// //     </BrowserRouter> */}
+// </>
+//   );
+//  }
 
- function App() {
+// export default App;
+ import React from "react";
+import Apping from "./apping";
+import store from "../store";
+import {Provider} from "react-redux"
+import Cart from "../cart"
+import {BrowserRouter , Route , Routes} from "react-router-dom"
+function App() {
   return (
-     
-<Apps/>
-     
-//     <BrowserRouter>
-//       <Routes>
-//           <Route path="/" element={<Apps />} />
-//         <Route path="/recipe/:id" element={< P />} />
-//       </Routes>
-//     </BrowserRouter>
+    <>
+      <Provider store={store}>
+         <BrowserRouter>
+         <Routes>
+          
+    <Route path="/" element={<Apping />} />
+  <Route path="/about" element={< Cart />} /> 
+   
+  </Routes>
+  </BrowserRouter>
+  </Provider>
+   </>
   );
- }
+}
 
 export default App;
